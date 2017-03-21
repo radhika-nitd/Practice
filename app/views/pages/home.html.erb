@@ -1,0 +1,222 @@
+url<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Maxim - Modern One Page Bootstrap Template</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/default.css" rel="stylesheet">
+<link rel="shortcut icon" href="assets/images/favicon.ico">
+<!-- =======================================================
+    Theme Name: Maxim
+    Theme URL: https://bootstrapmade.com/maxim-free-onepage-bootstrap-theme/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+======================================================= -->
+
+</head>
+<body>
+<!-- navbar -->
+<div class="navbar-wrapper">
+
+ <nav class="navbar navbar-inverse navbar-fixed-top">
+ <div class="navbar-inner">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <h1 class="brand"> <a  href="#">RECursion</a> </h1>
+    </div>
+    <ul id="menu-main" class="nav navbar-nav navbar-right">
+    <li><a title="team" href="home">Home</a></li>
+      <li><a title="team" href="#about">About</a></li>
+        <li><a title="works" href="#sponsors">Sponsors</a></li>
+         <li><a title="team" href="leaderboard">Leaderboard</a></li>
+         <li><a href="loginsignup">Login/Signup</a></li>
+          <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Rules
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a>1. Write all answers in lowercase.</a></li>
+          <li><a>2. Don't include space between two words.</a></li>
+          <li><a>3. Try to link the question with the image.</a></li>
+          <li><a>4. Save the letters you get for future.</a></li>
+        </ul>
+      </li>
+      <% if current_user %> 
+      <li class="dropdown"> 
+         <a  class="dropdown-toggle" data-toggle="dropdown" href="#"><%= current_user.name %> 
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="profile">My Profile</a></li>
+          <li><%= link_to "Sign out", 'sign_out', method: :delete , class: "nav-link"%></li>
+        </ul>
+      </li>
+      
+      <% else %>
+        <li> <%= link_to "Log in with Facebook", "auth/facebook", class: "nav-link" %></li>
+      <% end %>
+    </ul>
+  </div>
+  </div>
+</nav>
+</div>
+<!-- Header area -->
+<div id="header-wrapper" class="header-slider">
+  <header class="clearfix">
+  <div class="logo">
+    <img src="assets/images/logo-image.png" alt="" />
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <div id="main-flexslider" class="flexslider">
+          <ul class="slides">
+            <li>
+            <p class="home-slide-content">
+              <strong>Coding is a Choice,</strong> not a Compulsion.
+            </p>
+            </li>
+            <li>
+            <p class="home-slide-content">
+              When you are doing it, <strong>just do it with a smile.</strong>
+            </p>
+            </li>
+          </ul>
+        </div>
+        <!-- end slider -->
+      </div>
+    </div>
+  </div>
+  </header>
+</div>
+<!-- spacer section -->
+<section class="spacer green">
+<div class="container">
+  <div class="row">
+    <div class="span6 alignright flyLeft">
+      <blockquote class="large">
+         There's huge space between creativity and imagination <cite>Mark Simmons, Nett Media</cite>
+      </blockquote>
+    </div>
+    <div class="span3 aligncenter flyRight">
+      <i class="icon-coffee icon-10x"></i>
+    </div>
+  </div>
+</div>
+</section>
+<!-- end spacer section -->
+<!-- section: team -->
+<section id="about" class="section">
+<div class="container">
+  <h4>Who Are We?</h4>
+
+  <div class="row">
+    <div class="span7 offset1 of">
+      <div class="p">
+       
+        <p>
+          RECursion NIT Durgapur is an initiative to embolden the budding coding minds through regular Code Classes, robust coding competitions and geeky sessions.
+          Pioneered by a faction of enthusiast in 2014, RECursion has continued to evolve ever since.Besides a fancy placement package, We seek to ameliorate participation in programming competitions like ACM ICPC etc.
+          Our dynamic panel is invariably available to sort any techie doubts and cultivate positivity in you. We intend to create an intriguing ambience where coding is more of a mind sport and after every green tick the Coder in you gets bigger and wittier. So if you have those bits hovering over your head 24*7, RECursion is your Solution!
+        </p>
+      </div>
+    </div>
+    <div class="span3 ">
+      
+        <img src="images/show.jpg"  alt="" height="99"/>
+      
+    </div>
+  </div>
+  <div class="row">
+    <div class="span3 offset1 flyIn">
+      <div class="people">
+        <img class="team-thumb img-circle" src="images/team/img-1.jpg" alt="" />
+        <h3>Aman Agarwal</h3>
+        <p>
+          President
+        </p>
+      </div>
+    </div>
+    <div class="span3 flyIn">
+      <div class="people">
+        <img class="team-thumb img-circle" src="images/team/img-2.jpg" alt="" />
+        <h3>Parakh Bansal</h3>
+        <p>
+          Treasurer
+        </p>
+      </div>
+    </div>
+    <div class="span3 flyIn">
+      <div class="people">
+        <img class="team-thumb img-circle" src="images/team/img-3.jpg" alt="" />
+        <h3>Shrija Mishra</h3>
+        <p>
+          Convenor
+        </p>
+      </div>
+    </div>
+    
+  </div>
+</div>
+<!-- /.container -->
+</section>
+<!-- end section: team -->
+<!-- section: services -->
+
+
+<!-- end spacer section -->
+<!-- section: blog -->
+<section id="sponsors" class="section orange">
+<div class="container">
+  <h4>Sponsors</h4>
+  <!-- Three columns -->
+
+  <div class="row">
+    <div class="span3">
+    
+      <img src="images/grabon.png" alt="GrabOn">
+    
+      </div>
+      <div class="span5">
+      
+      <img src="images/codechef2.jpg" alt="CodeChef">
+     </div>
+      </div>
+    </div>
+    
+    <% if current_user %>
+    <div class="text-center">
+    <a href="index" class="btn btn-info" role="button">Go to treasure hunt</a>
+    </div>
+    <%end %>
+</section>
+
+<!-- end spacer section -->
+<!-- section: contact 
+<section id="signup" class="section green">
+<div class="container">
+  <h4>SIGN UP</h4>
+  <div class="form">-->
+      
+     
+    <!-- ./span12 -->
+
+<a href="#" class="scrollup"><i class="icon-angle-up icon-square icon-bgdark icon-2x"></i></a>
+<script src="js/jquery.js"></script>
+<script src="js/jquery.scrollTo.js"></script>
+<script src="js/jquery.nav.js"></script>
+<script src="js/jquery.localscroll-1.2.7-min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.prettyPhoto.js"></script>
+<script src="js/isotope.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/inview.js"></script>
+<script src="js/animate.js"></script>
+<script src="js/validate.js"></script>
+<script src="js/custom.js"></script>
+<script src="contactform/contactform.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>my_profile</title>
+    
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= csrf_meta_tags %> 
+    <style >
+    	body{
+
+    		background-color: yellow;
+    		text-align: center;
+    		margin: 100px;
+    	}
+    	
+
+    </style>
+  </head>
+
+  <body>
+  	
+  	 <%= form_for(@user) do |f| %>
+        <%= f.text_area :email, :placeholder => "Email" %>
+      <%= f.text_area :college, :placeholder => "College Name" %>
+      <%= submit_tag "Save", class:'btn btn-submit' %>
+    <% end %>
+
+  </body>
+  </html>
